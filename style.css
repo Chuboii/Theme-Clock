@@ -1,0 +1,134 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 100dvh;
+    overflow: hidden;
+    transition: all 1s;
+    align-items: center;
+}
+
+
+
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.container button{
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: .4rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    transition: all 1s;
+}
+
+.toggle{
+    background-color: rgb(27, 27, 27);
+    color: white
+    ;
+}
+
+.container .clock{
+  
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    position: relative;
+  margin-bottom: 0;
+}
+.container .clock::before{
+    content: '';
+    position: absolute;
+    width: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 7px;
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color:black;
+    z-index: 1;
+    transition:all 1s;
+}
+.container .clock.active::before{
+    background-color: white;
+}
+.container .clock .needle{
+        height: 60px;
+        width: 2.4px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+    transform-origin: bottom center;
+    transition: all 1s ease-in-out;
+}
+
+.container .clock .hr-hand{
+    height: 45px;
+    width: 2.4px;
+    transform:translate(-50%, -100%) rotate(0deg);
+    background-color: black;
+   
+
+}
+
+
+.container .clock .min-hand{
+    height: 60px;
+    width: 2.4px;
+    background-color: black;
+
+    transform:translate(-50%, -100%) rotate(0deg);
+
+    
+}
+
+
+.container .clock .sec-hand{
+    height: 85px;
+    width: 2.4px;
+    background-color: red;
+
+    transform:translate(-50%, -100%) rotate(0deg);
+  
+    
+}
+
+.container .display-time{
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+.container .date-display{
+    color: gray;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.container .date-display .day{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: .1rem;
+    transition: all 1s;
+}
+
+.container .date-display span.active{
+    background-color: white;
+    color: black;
+}
+
+@keyframes move {
+    0%{
+        
+    }
+}
